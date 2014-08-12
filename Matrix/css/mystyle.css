@@ -1,0 +1,21 @@
+body {
+	background-color: #000000;
+	color: #00ff00;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2{
+	padding-top: 50px;
+}
+
+div {
+	text-align: center;
+}
+
+#MatPic {
+	height: 250px;
+	width: 450px;
+}
