@@ -7,11 +7,22 @@ h1 {
 	text-align: center;
 }
 
-h2{
+body{
+	background-image: url(Matrix.png);
+}
+
+body, h2{
 	padding-top: 50px;
 }
 
+body, h3{
+	text-align: center;
+}
 div {
+	text-align: center;
+}
+
+footer, h2 {
 	text-align: center;
 }
 
