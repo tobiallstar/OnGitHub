@@ -1,4 +1,4 @@
-var words = ["failure", "success", "creativity", "resilience", "execution", "innovation","dominate","strive","prosper","greatness","consistancy","work","integrity","GRIT","achievement"];
+var words = ["failure", "success", "creativity", "resilience", "execution", "innovation","dominate","strive","prosper","greatness","consistancy","work","integrity","GRIT","achievement","courage","planning","winning","conquer"];
 var scrambledWords = [];  // ["efaliur","essucse","tretviiacy","inceilresi","xceenutio","nnniatovon","amoidten","rivtse","oppsre", "rtegasens","tccnosaisny","owkr","nityegrit","RITG"];
 var xArray = [];
 var x = 10;
@@ -8,7 +8,7 @@ var y3  = 10;
 function setup()
  {
  
-	  createCanvas(400, 400);
+	  createCanvas(600, 600);
 	  noStroke();
 	  background(0, 0, 0);
 	  frameRate(10);
@@ -83,6 +83,7 @@ var draw = function()
 {
 	background(0, 0, 0);
 	fill(0, 200, 0);
+	textSize(15);
 	//frameRate(2);	
 	
 
