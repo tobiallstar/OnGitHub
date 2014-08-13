@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500' rel='stylesheet' type='text/css'>
     <meta charset="utf-8">
     <title>Matrix</title>
   <link rel="stylesheet" type="text.css" href="css/mystyle.css">
   <script language="javascript" type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.2.22/p5.js"></script>
-  <script language="javascript" type="text/javascript" src="sketch.js">
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script language="javascript" type="text/javascript" src="js/sketch.js">
   </script>
+
+
+  <script>
+
+  $("#Button").click(function(){
+
+    $("#Button").remove();
+    $("#footer").append("<div id = "myCanvas">" + "</div>");
+
+
+  });
+
+
+  </script>>
+
   </head>
 <body>
   <header>
-  <h1>s
-    Enter The Matrix:
+  <h1>
+   Enter The Matrix:
   </h1>
   <h2>
     <div>
@@ -22,8 +40,10 @@
   <h3>There will be a number of scrambled words descending from the top of the screen, all tied together with a certain theme. Can you figure them out?</h3>
   </header>
  </body>
-<footer>
-<h1><a href="Matrix.html"><input type="button" value="Break the Message!"></a></h1>
+<footer id="footer">
+<h1>
+<input type="button" value="Break the Code!" id="Button" src="js/sketch.js">
+</h1>
 <h2>By Tobi Popoola and Gary Coltrane</h1>
 </footer>
 

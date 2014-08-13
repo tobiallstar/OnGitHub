@@ -1,3 +1,4 @@
+
 body {
 	background-color: #000000;
 	color: #00ff00;
@@ -5,18 +6,20 @@ body {
 
 h1 {
 	text-align: center;
+	font-family: 'Alegreya Sans SC', sans-serif;
 }
 
 body{
-	background-image: url(Matrix.png);
 }
 
 body, h2{
 	padding-top: 50px;
+	font-family: 'Alegreya Sans SC', sans-serif;
 }
 
 body, h3{
 	text-align: center;
+	font-family: 'Alegreya Sans SC', sans-serif;
 }
 div {
 	text-align: center;
@@ -24,6 +27,7 @@ div {
 
 footer, h2 {
 	text-align: center;
+	font-family: 'Alegreya Sans SC', sans-serif;
 }
 
 #MatPic {
