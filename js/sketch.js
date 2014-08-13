@@ -1,10 +1,19 @@
+
+
 var words = ["failure", "success", "creativity", "resilience", "execution", "innovation","dominate","strive","prosper","greatness","consistancy","work","integrity","GRIT","achievement","courage","planning","winning","conquer"];
 var scrambledWords = [];  // ["efaliur","essucse","tretviiacy","inceilresi","xceenutio","nnniatovon","amoidten","rivtse","oppsre", "rtegasens","tccnosaisny","owkr","nityegrit","RITG"];
 var xArray = [];
 var x = 10;
+
+
 var y3  = 10;
 	  		
 
+
+
+// ===========================================================
+//						SETUP
+// ===========================================================
 function setup()
  {
  
@@ -13,6 +22,7 @@ function setup()
 	  background(0, 0, 0);
 	  frameRate(10);
 	 
+
 
 	    var word, scrambledWord;
 	    var a, n;
@@ -42,43 +52,18 @@ function setup()
 
 		} // k
 
-
-
-  	}  // SETUP
-
-
-    	// for (var x=0; x<scrambled.length; x++)
-    	// {
-   		// var r = random(0,20);
-    	// 	console.log("r = " + r);
-    	// 	k = Math.round(r) * 20;
-    	// 	console.log("k = " + k);
-    	// 	xArray.push(k);		
-    	// }
-
- // var y3=10;
- // var x3=30;
-
-  // SETUP!!
-// function keyTyped () {
-//  	if (key === 'a') {
-//  prompt("TEST");
+		
+// words = jQuery.grep(words, function(value) {
+// 	return value! = removeItem;
 // }
 
-//  
-// // 	function removeScrambled() {
-// if prompt() = 
-// 	}
-// }                                                   
+};  // SETUP
 
 
-// // coordinates each set x,y value in a variable so it'll be pre-implemented and easily recognizable
 
-
-// var enter= prompt("Enter")
-// var arrayOfLetters = enter.split("")
-
-
+// ===========================================================
+//						DRAW
+// ===========================================================
 var draw = function() 
 {
 	background(0, 0, 0);
@@ -123,10 +108,8 @@ var draw = function()
 	 	y3 = 10;
 	 }
 
-
-
-};
-
+    // Get answer - Tell if right or wrong
+}   // DRAW
 
 
 
