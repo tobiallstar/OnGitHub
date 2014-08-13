@@ -1,96 +1,130 @@
-function setup() {
-  // creates the black canvas of the code and sets the speed for the codes animation
-  var myCanvas = createCanvas(400, 400);
-  myCanvas.parent('myCanvas');
-  noStroke();
-  background(0, 0, 0);
-  frameRate(15);
+var words = ["failure", "success", "creativity", "resilience", "execution", "innovation","dominate","strive","prosper","greatness","consistancy","work","integrity","GRIT","achievement"];
+var scrambledWords = [];  // ["efaliur","essucse","tretviiacy","inceilresi","xceenutio","nnniatovon","amoidten","rivtse","oppsre", "rtegasens","tccnosaisny","owkr","nityegrit","RITG"];
+var xArray = [];
+var x = 10;
+var y3  = 10;
+	  		
 
-}
+function setup()
+ {
+ 
+	  createCanvas(400, 400);
+	  noStroke();
+	  background(0, 0, 0);
+	  frameRate(10);
+	 
+
+	    var word, scrambledWord;
+	    var a, n;
+	  	for (var k=0; k<words.length; k++)
+	  	{
+		  		word = words[k];
+
+		        // a = word.split("");
+		        a = [];
+		        for (w=0; w<word.length; w++)
+		        {
+		        	a.push(word.charAt(w));
+		        }
+
+		        n = a.length;
+
+		        for(var i = n - 1; i > 0; i--) 
+		        {
+			        var j = Math.floor(Math.random() * (i + 1));
+			        var tmp = a[i];
+			        a[i] = a[j];
+			        a[j] = tmp;
+		        }
+
+		        scrambleWord =  a.join("");
+		        scrambledWords.push(scrambleWord);
+
+		} // k
+
+
+
+  	}  // SETUP
+
+
+    	// for (var x=0; x<scrambled.length; x++)
+    	// {
+   		// var r = random(0,20);
+    	// 	console.log("r = " + r);
+    	// 	k = Math.round(r) * 20;
+    	// 	console.log("k = " + k);
+    	// 	xArray.push(k);		
+    	// }
+
+ // var y3=10;
+ // var x3=30;
+
+  // SETUP!!
+// function keyTyped () {
+//  	if (key === 'a') {
+//  prompt("TEST");
+// }
+
+//  
+// // 	function removeScrambled() {
+// if prompt() = 
+// 	}
+// }                                                   
 
 
 // // coordinates each set x,y value in a variable so it'll be pre-implemented and easily recognizable
-var x = 10;
-var y = 10;
-var x2 = 20;
-var y2 = 10;
-var x3 = 30;
-var y3 = 10;
-
-//var str=""
-var enter= prompt("enter")
-var arrayOfLetters = enter.split("")
 
 
+// var enter= prompt("Enter")
+// var arrayOfLetters = enter.split("")
 
-//var arrayOfLetters = ["c", "h", "i", "c", "k", "e", "n"];
 
-//draws the line of text that drops down the canvas in different x,y coordinates, each text is stacked on top of each other and will be set on each 20th line of the y axis
-
-var draw = function() {
-
+var draw = function() 
+{
 	background(0, 0, 0);
-	for(var i=0; i<arrayOfLetters.length; i++) {
-		 var result = arrayOfLetters[i];
-	     text(result, x3, y3+20*i);
-	     frameRate(5);
+	fill(0, 200, 0);
+	//frameRate(2);	
+	
+
+    // Set up one word VERTICALLY from the scrambled array.
+   for (var i=0; i<scrambledWords.length; i++) {
+	   for(var j=0; j<scrambledWords[i].length; j++) {		
+		 var result = scrambledWords[i].charAt(j);
+		 text(result, xArray[i], y3+20*j);
+	   }
 	}
+
+
+
+    // Drop down
     y3 = y3 + 10;
-    if (y3 > 399) {
-	 	x3 = random(110,200);
-	 	y3= 10;
+    if (y3 > 399) { 	
+    	xArray = [];
+    	for (x=0; x<scrambledWords.length; x++)
+    	{   
 
+    		var found;
+    		var r,k;
+    		do{
+    			found = false;
+    			r = random(0,20);
+    			k = Math.round(r) * 20;
+    			for (var t=0; t<xArray.length; t++)
+    			{
+    				if (xArray[t]===k)
+    					found = true;
+    			}
+    		} while(found===true); 
+			xArray.push(k);		
+    	}
+    	// x3 = random(0,400);	
+    	// x4 = random(0,400);	    	
+	 	y3 = 10;
 	 }
 
-    
-	text("0", x, y);
-	text("1", x, y + 20);
- 	text("0",x, y + 40);
-	text("0",x, y+ 60);
-	text("0", x, y + 80);
-	text("0", x, y + 100);
-	text("1", x, y +120);
 
 
-
-// the code below makes the text restart from the top after reaching the bottom
-	y+=10;
-	if ( y > 399 ) {
-		x = random(10,100);
-		y = 10;
-
-
-	}
-	 // same as line 19 
-	 text("2", x2, y2);
-	 text("3", x2, y2+20);
-	 text("x", x2, y2+40);
-	 text("7", x2, y2+60);
-	 text("F", x2, y2+80);
-	 text("0", x2, y2+100);
-	 text("k", x2, y2+120);
-	 text("b", x2, y2+140);
-	 text("0", x2, y2+160);
-	 text("1", x2, y2+180);
-	 text("1", x2, y2+200);
-	 y2+=10;
-	 //same as line 30
-	 if ( y2 > 399 ) {
-	 	x2= random(210,299);
-	 	y2 = 20;
-	 }
-	 // text("z", x3, y3);
-
-	 // y3+=10
-	 // 
-
-
-
-
-	}
-
-
-
+};
 
 
 
