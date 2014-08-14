@@ -2,14 +2,13 @@ $(document).ready(function()
 {
 	var removeItem = function() 
 	{
-		console.log($("#guess").val());
+
 		var found = false;
-		for(var i = 0; words.length; i++) 
+		for(var i = 0; i<words.length; i++) 
 		{
 			if( $("#guess").val()=== words[i] )
 		    {  
     			scrambledWords[i] = "";
-  alert("scrambledWords[" + i + "] = " + scrambledWords[i] );
     			found = true;
     			break;
 			}
