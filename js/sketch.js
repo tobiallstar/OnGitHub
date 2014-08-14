@@ -20,7 +20,7 @@ function setup()
 	  createCanvas(1200, 1200);
 	  noStroke();
 	  background(0, 0, 0);
-	  frameRate(5);
+	  frameRate(8);
 	 
 
 
@@ -92,6 +92,7 @@ var draw = function()
 	background(0, 0, 0);
 	fill(0, 200, 0);
 	textSize(65);
+	textFont("Emigre");
 	//frameRate(2);	
 	
 
