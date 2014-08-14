@@ -1,6 +1,6 @@
 
 
-var words = ["failure", "success", "creativity", "resilience", "execution", "innovation","dominate","strive","prosper","greatness","consistancy","work","integrity","GRIT","achievement","courage","planning","winning","conquer"];
+var words = ["Failure", "Success", "Creativity", "Resilience", "Execution", "Innovation","Dominate","Strive","Prosper","Greatness","Consistancy","Work","Integrity","Grit","Achievement","Courage","Planning","Winning","Conquer"];
 var scrambledWords = [];  // ["efaliur","essucse","tretviiacy","inceilresi","xceenutio","nnniatovon","amoidten","rivtse","oppsre", "rtegasens","tccnosaisny","owkr","nityegrit","RITG"];
 var xArray = [];
 var x = 10;
@@ -17,10 +17,10 @@ var y3  = 10;
 function setup()
  {
  
-	  createCanvas(600, 600);
+	  createCanvas(1200, 1200);
 	  noStroke();
 	  background(0, 0, 0);
-	  frameRate(10);
+	  frameRate(5);
 	 
 
 
@@ -30,9 +30,10 @@ function setup()
 	  	{
 		  		word = words[k];
 
-		        // a = word.split("");
-		        a = [];
-		        for (w=0; w<word.length; w++)
+		  		var firstLetter = word.charAt(0);
+		  		var lastLetter = word.charAt(word.length-1);
+				a = [];
+		        for (w=1; w<word.length-1; w++)
 		        {
 		        	a.push(word.charAt(w));
 		        }
@@ -48,7 +49,29 @@ function setup()
 		        }
 
 		        scrambleWord =  a.join("");
-		        scrambledWords.push(scrambleWord);
+		        scrambledWords.push(firstLetter + scrambleWord + lastLetter);
+
+
+
+		        // a = word.split("");
+		        // a = [];
+		        // for (w=0; w<word.length; w++)
+		        // {
+		        // 	a.push(word.charAt(w));
+		        // }
+
+		        // n = a.length;
+
+		        // for(var i = n - 1; i > 0; i--) 
+		        // {
+			       //  var j = Math.floor(Math.random() * (i + 1));
+			       //  var tmp = a[i];
+			       //  a[i] = a[j];
+			       //  a[j] = tmp;
+		        // }
+
+		        // scrambleWord =  a.join("");
+		        // scrambledWords.push(scrambleWord);
 
 		} // k
 
@@ -68,7 +91,7 @@ var draw = function()
 {
 	background(0, 0, 0);
 	fill(0, 200, 0);
-	textSize(15);
+	textSize(65);
 	//frameRate(2);	
 	
 
@@ -76,7 +99,7 @@ var draw = function()
    for (var i=0; i<scrambledWords.length; i++) {
 	   for(var j=0; j<scrambledWords[i].length; j++) {		
 		 var result = scrambledWords[i].charAt(j);
-		 text(result, xArray[i], y3+20*j);
+		 text(result, xArray[i], y3+60*j);
 	   }
 	}
 
@@ -84,7 +107,7 @@ var draw = function()
 
     // Drop down
     y3 = y3 + 10;
-    if (y3 > 399) { 	
+    if (y3 > 799) { 	
     	xArray = [];
     	for (x=0; x<scrambledWords.length; x++)
     	{   
@@ -94,7 +117,7 @@ var draw = function()
     		do{
     			found = false;
     			r = random(0,20);
-    			k = Math.round(r) * 20;
+    			k = Math.round(r) * 60;
     			for (var t=0; t<xArray.length; t++)
     			{
     				if (xArray[t]===k)
